@@ -1,14 +1,14 @@
-<table>
-  <tr>
-    <td>{{players[0].name}}</td>
-    <td>Level:</td><td>{{players[0].level}}</td>
-    <td>Score:</td><td>{{players[0].points}}</td>
+<table class="tablePlayer">
+  <tr class="tablePlayerStats">
+    <td class="tablePlayerName">{{players[0].name}}</td><td width="30px"></td>
+    <td>Level:</td><td>{{players[0].level}}</td><td width="30px"></td>
+    <td>Score:</td><td>{{players[0].points}}</td><td width="30px"></td>
     <td>Cards:</td><td>{{players[0].hand.length}}</td>
   </tr>
 </table>
 <table>
   <tr *ngFor="let cardGroup of players[0].playedCards">
-    <td *ngFor="let card of cardGroup">
+    <td  class="tableCellCard" *ngFor="let card of cardGroup">
       <div [ngStyle]="{'color':card.getDisplayColor()}" [innerHTML]="card.getDisplayCard()"></div>
     </td>
   </tr>

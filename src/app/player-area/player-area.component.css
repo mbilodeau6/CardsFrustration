@@ -1,8 +1,24 @@
-.table, td, tr {
+.tableCellCard {
   border: 1px solid black;
   padding: 10px;
   height: 60px;
   width: 30px;
   border-spacing: 10px;
   font-size: 32px;
+}
+
+.tablePlayer {
+  border: 1px solid blue;
+  background-color: blue;
+}
+
+.tablePlayerStats {
+  font-size: 20px;
+  color: white;
+}
+
+.tablePlayerName {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
 }
