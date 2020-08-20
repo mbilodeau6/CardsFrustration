@@ -1,1 +1,8 @@
-<p>player-hand works!</p>
+<table>
+  <tr class="yourHandHeader"><td colspan="12">Your Hand</td></tr>
+  <tr>
+    <td  class="tableCellCard" *ngFor="let card of hand">
+      <div [ngStyle]="{'color':card.getDisplayColor()}" [innerHTML]="card.getDisplayCard()"></div>
+    </td>
+  </tr>
+<table>

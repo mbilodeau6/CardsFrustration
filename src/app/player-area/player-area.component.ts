@@ -16,7 +16,7 @@ export class PlayerAreaComponent implements OnInit {
 
   ngOnInit(): void {
     this.players[0].level = 2;
-    this.players[0].setPlayedCards([[new Card(Suit.Diamond, Rank.Queen), new Card(Suit.Diamond, Rank.King), new Card(Suit.Diamond, Rank.Ace)], [new Card(Suit.Club, Rank.Two), new Card(Suit.Club, Rank.Seven), new Card(Suit.Diamong, Rank.Seven)], [new Card(Suit.Spade, Rank.Ten)]]);
+    this.players[0].setPlayedCards([[new Card(Suit.Diamond, Rank.Queen), new Card(Suit.Diamond, Rank.King), new Card(Suit.Diamond, Rank.Ace)], [new Card(Suit.Club, Rank.Two), new Card(Suit.Club, Rank.Seven), new Card(Suit.Diamond, Rank.Seven)], [new Card(Suit.Spade, Rank.Ten)]]);
     this.players[0].setHand([]);
 
     this.players[1].level = 1;
