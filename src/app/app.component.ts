@@ -16,7 +16,6 @@ export class AppComponent {
 
   getGameState(): void {
     this.gameState = this.dataService.getGameState();
-    console.log("App Component gameState set. Player Turn = " + this.gameState.playerTurn);
   }
 
   ngOnInit() {

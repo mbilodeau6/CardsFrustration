@@ -11,6 +11,6 @@
 <table class="boardTable">
   <tr>
     <td><app-shared-area [gameState] = 'gameState'></app-shared-area></td>
-    <td><app-player-hand></app-player-hand></td>
+    <td><app-player-hand [hand] = 'gameState.players[0].hand'></app-player-hand></td>
   </tr>
 <table>

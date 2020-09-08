@@ -6,4 +6,8 @@ export class Game {
     discardPile: Card[];
     playerTurn: number;
     players: Player[];
+
+    constructor() {
+      this.players = [];
+    }
 }
