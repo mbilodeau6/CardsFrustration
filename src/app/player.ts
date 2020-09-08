@@ -13,6 +13,7 @@ export class Player {
     this.level = 1;
     this.score = 0;
     this.melds = [];
+    this.hand = [];
   }
 
   // TODO: Remove when server code complete

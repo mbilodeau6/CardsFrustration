@@ -1,13 +1,13 @@
 <table class="tablePlayer">
   <tr class="tablePlayerStats">
-    <td class="tablePlayerName">{{players[playerId].name}}</td><td width="30px"></td>
-    <td>Level:</td><td>{{players[playerId].level}}</td><td width="30px"></td>
-    <td>Score:</td><td>{{players[playerId].score}}</td><td width="30px"></td>
-    <td>Cards:</td><td>{{players[playerId].hand.length}}</td>
+    <td class="tablePlayerName">{{player.name}}</td><td width="30px"></td>
+    <td>Level:</td><td>{{player.level}}</td><td width="30px"></td>
+    <td>Score:</td><td>{{player.score}}</td><td width="30px"></td>
+    <td>Cards:</td><td>{{player.hand.length}}</td>
   </tr>
 </table>
 <table>
-  <tr *ngFor="let meld of players[playerId].melds">
+  <tr *ngFor="let meld of player.melds">
     <td  class="tableCellCard" *ngFor="let card of meld.getCards()">
       <div [ngStyle]="{'color':card.getDisplayColor()}" [innerHTML]="card.getDisplayCard()"></div>
     </td>

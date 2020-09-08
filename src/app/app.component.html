@@ -1,11 +1,11 @@
 <table class="boardTable">
   <tr>
-    <td><app-player-area playerId=0></app-player-area></td>
-    <td><app-player-area playerId=1></app-player-area></td>
+    <td><app-player-area [player] = 'gameState.players[0]'></app-player-area></td>
+    <td><app-player-area [player] = 'gameState.players[1]'></app-player-area></td>
   </tr>
   <tr>
-    <td><app-player-area playerId=2></app-player-area></td>
-    <td><app-player-area playerId=3></app-player-area></td>
+    <td><app-player-area [player] = 'gameState.players[2]'></app-player-area></td>
+    <td><app-player-area [player] = 'gameState.players[3]'></app-player-area></td>
   </tr>
 </table>
 <table class="boardTable">
