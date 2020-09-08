@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { PlayerHandComponent } from './player-hand/player-hand.component';
@@ -16,7 +17,8 @@ import { GameSurfaceComponent } from './game-surface/game-surface.component';
     GameSurfaceComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

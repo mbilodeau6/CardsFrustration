@@ -1,4 +1,4 @@
-import Player from '.player.ts';
+import { Player } from './player';
 import { Card, Suit, Rank } from './card';
 
 export class Game {

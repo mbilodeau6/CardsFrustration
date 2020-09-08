@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Game } from '../game';
 
 @Component({
   selector: 'app-shared-area',
@@ -6,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./shared-area.component.css']
 })
 export class SharedAreaComponent implements OnInit {
+  @Input() gameState: Game;
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }
