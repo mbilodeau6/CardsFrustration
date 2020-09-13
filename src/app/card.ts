@@ -1,25 +1,27 @@
+// TODO: Why do I have to set each enum to its string? If I don't, the value
+// of the Suits/Ranks from HTTP are neither strings nor Suit/Rank.
 export enum Suit {
-  Heart = 1,
-  Diamond,
-  Club,
-  Spade
+  Heart = 'Heart',
+  Diamond = 'Diamond',
+  Club = 'Club',
+  Spade = 'Spade'
 }
 
 export enum Rank {
-  Two = 2,
-  Three,
-  Four,
-  Five,
-  Six,
-  Seven,
-  Eight,
-  Nine,
-  Ten,
-  Jack,
-  Queen,
-  King,
-  Ace,
-  Joker
+  Two = 'Two',
+  Three = 'Three',
+  Four = 'Four',
+  Five = 'Five',
+  Six = 'Six',
+  Seven = 'Seven',
+  Eight = 'Eight',
+  Nine = 'Nine',
+  Ten = 'Ten',
+  Jack = 'Jack',
+  Queen = 'Queen',
+  King = 'King',
+  Ace = 'Ace',
+  Joker = 'Joker'
 }
 
 export class Card {

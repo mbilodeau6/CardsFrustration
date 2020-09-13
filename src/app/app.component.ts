@@ -26,9 +26,7 @@ export class AppComponent {
       let newPlayer = new Player(player.name);
 
       for(let card of player.hand) {
-        // TODO: Looks like suit and rank aren't real either
-        let newCard = new Card(Suit[card.suit], Rank[card.rank]);
-        newPlayer.hand.push(newCard);
+        newPlayer.hand.push(new Card(card.suit, card.rank));
       }
 
       newGameState.players.push(newPlayer);
