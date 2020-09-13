@@ -12,10 +12,11 @@ export class AppComponent {
   title = 'cards-frustration';
 
   constructor(private dataService: DataService) {
+    this.gameState = new Game();
   }
 
   getGameState(): void {
-    this.gameState = this.dataService.getGameState();
+    this.dataService.getGameState().subscribe(gameState => this.gameState = gameState);
   }
 
   ngOnInit() {
