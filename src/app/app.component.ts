@@ -3,6 +3,7 @@ import { DataService } from './data.service';
 import { Game } from './game';
 import { Player } from './player';
 import { Card, Suit, Rank } from './card';
+import { Meld } from './meld';
 
 @Component({
   selector: 'app-root',
@@ -21,12 +22,22 @@ export class AppComponent {
   // Do the conversion manually until I figure it out.
   setGameState(gameState: Game) {
     let newGameState: Game = new Game();
+    newGameState.playerTurn = gameState.playerTurn;
     newGameState.players = [];
     for(let player of gameState.players) {
       let newPlayer = new Player(player.name);
 
       for(let card of player.hand) {
         newPlayer.hand.push(new Card(card.suit, card.rank));
+      }
+
+      for(let meld: Meld of player.melds) {
+        let meldCards: Card[] = [];
+        for(let card: Card of meld.meld) {
+          meldCards.push(new Card(card.suit, card.rank));
+        }
+
+        newPlayer.melds.push(new Meld(meldCards));
       }
 
       newGameState.players.push(newPlayer);
