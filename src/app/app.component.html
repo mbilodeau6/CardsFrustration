@@ -3,9 +3,9 @@
     <td><app-player-area [player] = 'gameState.players[0]'></app-player-area></td>
     <td><app-player-area [player] = 'gameState.players[1]'></app-player-area></td>
   </tr>
-  <tr>
+  <tr *ngIf='gameState.players.length > 2'>
     <td><app-player-area [player] = 'gameState.players[2]'></app-player-area></td>
-    <td><app-player-area [player] = 'gameState.players[3]'></app-player-area></td>
+    <td><app-player-area *ngIf='gameState.players.length > 3' [player] = 'gameState.players[3]'></app-player-area></td>
   </tr>
 </table>
 <table class="boardTable">
