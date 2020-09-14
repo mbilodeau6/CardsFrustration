@@ -24,6 +24,8 @@ export class AppComponent {
     let newGameState: Game = new Game();
     newGameState.playerTurn = gameState.playerTurn;
     newGameState.players = [];
+    newGameState.deckCardCount = gameState.deckCardCount;
+    
     for(let player of gameState.players) {
       let newPlayer = new Player(player.name);
 
@@ -31,9 +33,9 @@ export class AppComponent {
         newPlayer.hand.push(new Card(card.suit, card.rank));
       }
 
-      for(let meld: Meld of player.melds) {
+      for(let meld of player.melds) {
         let meldCards: Card[] = [];
-        for(let card: Card of meld.meld) {
+        for(let card of meld.meld) {
           meldCards.push(new Card(card.suit, card.rank));
         }
 

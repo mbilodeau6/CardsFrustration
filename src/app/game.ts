@@ -2,8 +2,8 @@ import { Player } from './player';
 import { Card, Suit, Rank } from './card';
 
 export class Game {
-    deck: Card[];
-    discardPile: Card[];
+    deckCardCount: number;
+    discardTopCard: Card;
     playerTurn: number;
     players: Player[];
 
