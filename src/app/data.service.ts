@@ -13,8 +13,9 @@ export class DataService {
 
   constructor(private http: HttpClient) { }
 
-  getGameState(): Observable<Game> {
-    let gameStateUrl = 'http://localhost:8080/FrustrationService/frustration/games/A';
+  getGameState(gameId: string): Observable<Game> {
+    let gameStateUrl = 'http://localhost:8080/FrustrationService/frustration/games/' + gameId;
+    console.log("URL = " + gameStateUrl);
     let gameState = this.http.get<Game>(gameStateUrl);
     return gameState;
   }

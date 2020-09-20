@@ -1,5 +1,10 @@
 <table class="boardTable">
   <tr>
+    <td><label for="game-id">Game Id</label>
+      <input #gameIdBox id="game-id" (input)="setGameId(gameIdBox.value)" />
+    </td>
+  </tr>
+  <tr>
     <td><app-player-area [player] = 'gameState.players[0]'></app-player-area></td>
     <td><app-player-area [player] = 'gameState.players[1]'></app-player-area></td>
   </tr>
