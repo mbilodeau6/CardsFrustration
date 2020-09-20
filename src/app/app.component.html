@@ -3,6 +3,9 @@
     <td><label for="game-id">Game Id</label>
       <input #gameIdBox id="game-id" (input)="setGameId(gameIdBox.value)" />
     </td>
+    <td><label for="player-id">Player Id</label>
+      <input #playerIdBox id="player-id" (input)="setPlayerId(playerIdBox.value)" />
+    </td>
   </tr>
   <tr>
     <td><app-player-area [player] = 'gameState.players[0]'></app-player-area></td>

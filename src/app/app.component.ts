@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { DataService } from './data.service';
 import { Game } from './game';
 import { Player } from './player';
@@ -23,10 +22,13 @@ export class AppComponent {
   // Do the conversion manually until I figure it out.
   setGameState(gameState: Game) {
     let newGameState: Game = new Game();
+
+    newGameState.gameId = this.gameState.gameId;
+    newGameState.playerId = this.gameState.playerId;
+
     newGameState.playerTurn = gameState.playerTurn;
     newGameState.players = [];
     newGameState.deckCardCount = gameState.deckCardCount;
-    newGameState.gameId = 'Unknown';
 
     for(let player of gameState.players) {
       let newPlayer = new Player(player.name);
@@ -51,9 +53,8 @@ export class AppComponent {
   }
 
   getGameState(): void {
-    if (this.gameState.gameId) {
-      console.log("About to call getGameState()");
-      this.dataService.getGameState(this.gameState.gameId).subscribe(gameState => this.setGameState(gameState));
+    if (this.gameState.gameId && this.gameState.playerId) {
+      this.dataService.getGameState(this.gameState.gameId, this.gameState.playerId).subscribe(gameState => this.setGameState(gameState));
     }
   }
 
@@ -63,6 +64,11 @@ export class AppComponent {
 
   setGameId(gameId: string) {
     this.gameState.gameId = gameId;
+    this.getGameState();
+  }
+
+  setPlayerId(playerId: number) {
+    this.gameState.playerId = playerId;
     this.getGameState();
   }
 }
